@@ -1673,6 +1673,14 @@ var SpotifyWebApi = (function () {
     return _checkParamsAndPerformRequest(requestData, options, callback);
   };
 
+  Constr.prototype.getQueue = function (callback) {
+    var requestData = {
+      type: 'GET',
+      url: _baseUri + '/me/player/queue'
+    };
+    return _checkParamsAndPerformRequest(requestData, {}, callback);
+  };
+
   /**
    * Pause playback on the user’s account.
    * See [Pause a User’s Playback](https://developer.spotify.com/web-api/pause-a-users-playback/) on
